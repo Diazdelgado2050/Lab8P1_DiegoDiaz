@@ -57,11 +57,35 @@ public class Lab8P1_DiegoDiaz {
                 case 0:
                     System.out.println("Fin... de... el...programa");
                     break;
+                default:
+                    System.out.println("Ingrese una opcion valida del menu");
       
             }
             
             
         } while (opcion != 0);
+  
     }
-    
+    public static void estantes(String [] [] estantes){
+        for (int i = 0; i < estantes.length; i++) {
+            for (int j = 0; j < estantes[i].length; j++) {
+                estantes[i][j] = "Libre";
+            }
+           
+        }
+    }
+     public static void registarJuego(ArrayList<Videojuego> inventario, String [] [] estantes){
+                if (inventario.size() > 12) {
+             
+         }
+         
+            }
 }
+
+    
+    
+    
+    
+    
+    
+
