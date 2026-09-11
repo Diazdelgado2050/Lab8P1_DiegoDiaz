@@ -96,7 +96,61 @@ public class Lab8P1_DiegoDiaz {
             System.out.println("Ya existe un codigo con ese juego");
             return;
         }
+        System.out.print("Nombre: ");
+        String nombre = leer.nextLine();
+
+        System.out.print("Plataforma: ");
+        String plataforma = leer.nextLine();
+
+        System.out.print("Precio: ");
+        int precio = leer.nextInt();
+
+        System.out.print("Stock: ");
+        int stock = leer.nextInt();
+        leer.nextLine();
+
+       
+        boolean asignado = false;
+        for (int i = 0; i < estantes.length && !asignado; i++) {
+            for (int j = 0; j < estantes[i].length && !asignado; j++) {
+                if (estantes[i][j].equals("Libre")) {
+                    estantes[i][j] = nombre;
+                    System.out.println("Asignado al estante " + (i + 1) + ", espacio " + (j + 1));
+                    asignado = true;
+                }
+            }
+        }
+        
+        Videojuego nuevo = new Videojuego(cod, nombre, plataforma, precio, stock);
+        inventario.add(nuevo);
+        System.out.println("Videojuego registrado correctamente.");
+    }
+    
+    public static void mostrarjuego(ArrayList<Videojuego> inventario){
+        
+        System.out.println("Lista de Juegos");
+        for (int i = 0; i < inventario.size(); i++) {
+            Videojuego v = inventario.get(i);
+            System.out.println("Codigo: " + v.Gcodigo());
+            System.out.println("Nombre: " + v.Gnomproducto());
+            System.out.println("Plataforma: " + v.Gprogram());
+            System.out.println("Precio: L. " + v.GprecioJuegos());
+            System.out.println("Stock: " + v.GcantidadSt());
+            
+        }
+    }
+        
+        
+    }
+    
+            
+    
+    
+    
+
         
 
-    }
-}
+    
+
+        
+    
