@@ -21,6 +21,8 @@ public class Lab8P1_DiegoDiaz {
     public static void main(String[] args) {
         ArrayList<Videojuego> inventario = new ArrayList<>();
         String[][] estantes = new String[3][4];
+        
+        estantes(estantes);
 
         int opcion = 0;
 
@@ -48,13 +50,16 @@ public class Lab8P1_DiegoDiaz {
                     buscarJuego(inventario);
                     break;
                 case 4:
-                    
+                    actualizar(inventario);
                     break;
                 case 5:
+                    eliminardeStock(inventario, estantes);
                     break;
                 case 6:
+                    printestantes(estantes);
                     break;
                 case 7:
+                    pocoStock(inventario);
                     break;
                 case 0:
                     System.out.println("Fin... de... el...programa");
@@ -95,6 +100,7 @@ public class Lab8P1_DiegoDiaz {
         System.out.println("=== Registrar Videojuegos ===");
         System.out.println("Codigo: ");
         int cod = leer.nextInt();
+        leer.nextLine();
 
         if (buscarcode(inventario, cod) != null) {
             System.out.println("Ya existe un codigo con ese juego");
@@ -205,7 +211,7 @@ public class Lab8P1_DiegoDiaz {
         
     }
     
-    public static void Printestantes(String [][] estantes){
+    public static void printestantes(String [][] estantes){
         System.out.println("====== Estantes ======");
         for (int i = 0; i < estantes.length; i++) {
             System.out.println("Estante " + (i + 1));
