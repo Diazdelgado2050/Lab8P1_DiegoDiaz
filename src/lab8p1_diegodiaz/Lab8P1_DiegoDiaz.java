@@ -202,6 +202,8 @@ public class Lab8P1_DiegoDiaz {
     }
     
     public static void Printestantes(String [][] estantes){
+        System.out.println("====== Estantes ======");
+        
         
     }
 
