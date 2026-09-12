@@ -191,14 +191,18 @@ public class Lab8P1_DiegoDiaz {
         String eliminarNombre = video.Gnomproducto();
         for (int i = 0; i < estantes.length; i++) {
             for (int j = 0; j < estantes[i].length; j++) {
-                if (estantes[i][j]) {
-                    
+                if (estantes[i][j].equalsIgnoreCase(eliminarNombre)) {
+                    estantes[i][j] = "Libre";
                 }
             }
         }
+        inventario.remove(video);
+        System.out.println("Videojuego eliminado de stock exitosamente");
         
+    }
+    
+    public static void Printestantes(String [][] estantes){
         
-                
     }
 
 }
