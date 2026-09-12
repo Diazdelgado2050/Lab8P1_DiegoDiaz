@@ -72,10 +72,11 @@ public class Lab8P1_DiegoDiaz {
 
         }
     }
-    public static Videojuego buscarcode(ArrayList<Videojuego> inventario, int codigo ){
+
+    public static Videojuego buscarcode(ArrayList<Videojuego> inventario, int codigo) {
         for (int i = 0; i < inventario.size(); i++) {
             if (inventario.get(i).Gcodigo() == codigo) {
-               return inventario.get(i);
+                return inventario.get(i);
             }
         }
         return null;
@@ -86,13 +87,12 @@ public class Lab8P1_DiegoDiaz {
             System.out.println("Maximo de juegos en el estante (maximo 12)");
             return;
         }
-        
+
         System.out.println("=== Registrar Videojuegos ===");
         System.out.println("Codigo: ");
         int cod = leer.nextInt();
-        
-        
-        if (buscarcode(inventario, cod) != null ) {
+
+        if (buscarcode(inventario, cod) != null) {
             System.out.println("Ya existe un codigo con ese juego");
             return;
         }
@@ -109,7 +109,6 @@ public class Lab8P1_DiegoDiaz {
         int stock = leer.nextInt();
         leer.nextLine();
 
-       
         boolean asignado = false;
         for (int i = 0; i < estantes.length && !asignado; i++) {
             for (int j = 0; j < estantes[i].length && !asignado; j++) {
@@ -119,16 +118,16 @@ public class Lab8P1_DiegoDiaz {
                     asignado = true;
                 }
             }
-            
+
         }
-        
+
         Videojuego nuevo = new Videojuego(cod, nombre, plataforma, precio, stock);
         inventario.add(nuevo);
         System.out.println("Videojuego registrado correctamente.");
     }
-    
-    public static void mostrarjuego(ArrayList<Videojuego> inventario){
-        
+
+    public static void mostrarjuego(ArrayList<Videojuego> inventario) {
+
         System.out.println("Lista de Juegos");
         for (int i = 0; i < inventario.size(); i++) {
             Videojuego v = inventario.get(i);
@@ -139,24 +138,29 @@ public class Lab8P1_DiegoDiaz {
             System.out.println("Stock: " + v.GcantidadSt());
         }
     }
-   
-}
-public static void hola(){
-    System.out.println("He llegado sano y salvo a mi hogar, y ahora sin nada mas que hacer seguire con el codigo");
+
+    public static void buscarJuego(ArrayList<Videojuego> inventario) {
+        System.out.println("=== Buscar Videojuego ===");
+        System.out.print("Ingrese el codigo: ");
+        int code = leer.nextInt();
+
+        Videojuego video = buscarcode(inventario, code);
+        if (video != null) {
+            System.out.println("Videojuego encontrado: ");
+            System.out.println("Codigo: " + video.Gcodigo());
+            System.out.println("Nombre: " + video.Gnomproducto());
+            System.out.println("Plataforma: " + video.Gprogram());
+            System.out.println("Precio: L. " + video.GprecioJuegos());
+            System.out.println("Stock: " + video.GcantidadSt());
+
+        } else {
+            System.out.println("No se encontro ese codigo");
+        }
+
+    }
+    
+    public static void actualizar(ArrayList<Videojuego> inventario){
+        System.out.println("=== Actualizar videojuego === ");
+    }
 
 }
-
-            
-          
-    
-            
-    
-    
-    
-
-        
-
-    
-
-        
-    
