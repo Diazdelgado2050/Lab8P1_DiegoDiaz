@@ -213,5 +213,14 @@ public class Lab8P1_DiegoDiaz {
         }
         
     }
+    
+    public static void pocoStock(ArrayList<Videojuego> inventario){
+        System.out.println("Videojuegos con poco stock: ");
+        boolean pocoStock = false;
+        
+        for (int i = 0; i < inventario.size(); i++) {
+            
+        }
+    }
 
 }
