@@ -158,29 +158,47 @@ public class Lab8P1_DiegoDiaz {
         }
 
     }
-    
-    public static void actualizar(ArrayList<Videojuego> inventario){
+
+    public static void actualizar(ArrayList<Videojuego> inventario) {
         System.out.println("=== Actualizar videojuegos === ");
         System.out.println("Ingrese el dodigo");
         int codigo = leer.nextInt();
-        
+
         Videojuego v = buscarcode(inventario, codigo);
         System.out.println("Videojuego: " + v.Gnomproducto());
-            System.out.println("Precio actual: " + v.GprecioJuegos());
-            System.out.print("Nuevo precio: ");
-            int nuevoPrecio = leer.nextInt();
-            System.out.println("stock actual" + v.GcantidadSt());
-            System.out.println("Nuevo stock: ");
-            int nuevoStock = leer.nextInt();
-            
-            v.SprecioJuegos(nuevoPrecio);
-            v.ScantidadSt(nuevoStock);
-            
-            
-            
-            
+        System.out.println("Precio actual: " + v.GprecioJuegos());
+        System.out.print("Nuevo precio: ");
+        int nuevoPrecio = leer.nextInt();
+        System.out.println("stock actual" + v.GcantidadSt());
+        System.out.println("Nuevo stock: ");
+        int nuevoStock = leer.nextInt();
+
+        v.SprecioJuegos(nuevoPrecio);
+        v.ScantidadSt(nuevoStock);
+
+        System.out.println("Videojuego actualizado de manera correcta y limpia :)");
+
     }
     
     
+    public static void eliminardeStock(ArrayList<Videojuego> inventario, String [][] estantes){
+        System.out.println("=== Eliminar videojuego de stock === ");
+        System.out.println("Ingrese el codigo de el videojuego que desea elminar: ");
+        int codigo = leer.nextInt();
+        
+        Videojuego video = buscarcode(inventario, codigo);
+        
+        String eliminarNombre = video.Gnomproducto();
+        for (int i = 0; i < estantes.length; i++) {
+            for (int j = 0; j < estantes[i].length; j++) {
+                if (estantes[i][j]) {
+                    
+                }
+            }
+        }
+        
+        
+                
+    }
 
 }
