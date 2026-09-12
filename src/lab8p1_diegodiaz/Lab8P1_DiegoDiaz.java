@@ -203,7 +203,14 @@ public class Lab8P1_DiegoDiaz {
     
     public static void Printestantes(String [][] estantes){
         System.out.println("====== Estantes ======");
-        
+        for (int i = 0; i < estantes.length; i++) {
+            System.out.println("Estante " + (i + 1));
+            for (int j = 0; j < estantes[i].length; j++) {
+                System.out.println("[" + estantes[i][j] + "]");
+                
+            }
+            System.out.println("");
+        }
         
     }
 
