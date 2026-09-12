@@ -39,12 +39,16 @@ public class Lab8P1_DiegoDiaz {
 
             switch (opcion) {
                 case 1:
+                    registrarJuego(inventario, estantes);
                     break;
                 case 2:
+                    mostrarjuego(inventario);
                     break;
                 case 3:
+                    buscarJuego(inventario);
                     break;
                 case 4:
+                    
                     break;
                 case 5:
                     break;
@@ -82,7 +86,7 @@ public class Lab8P1_DiegoDiaz {
         return null;
     }
 
-    public static void registarJuego(ArrayList<Videojuego> inventario, String[][] estantes) {
+    public static void registrarJuego(ArrayList<Videojuego> inventario, String[][] estantes) {
         if (inventario.size() >= 12) {
             System.out.println("Maximo de juegos en el estante (maximo 12)");
             return;
