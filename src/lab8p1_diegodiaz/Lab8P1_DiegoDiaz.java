@@ -219,7 +219,11 @@ public class Lab8P1_DiegoDiaz {
         boolean pocoStock = false;
         
         for (int i = 0; i < inventario.size(); i++) {
-            
+            Videojuego v = inventario.get(i);
+            if (v.GcantidadSt() <= 2) {
+                System.out.println("Codigo: " + v.Gcodigo()+ " | Nombre: " + v.Gnomproducto()+ " | Stock: " + v.GcantidadSt());
+                pocoStock = true;
+            }
         }
     }
 
