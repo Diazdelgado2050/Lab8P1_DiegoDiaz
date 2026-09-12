@@ -119,6 +119,7 @@ public class Lab8P1_DiegoDiaz {
                     asignado = true;
                 }
             }
+            
         }
         
         Videojuego nuevo = new Videojuego(cod, nombre, plataforma, precio, stock);
@@ -136,12 +137,17 @@ public class Lab8P1_DiegoDiaz {
             System.out.println("Plataforma: " + v.Gprogram());
             System.out.println("Precio: L. " + v.GprecioJuegos());
             System.out.println("Stock: " + v.GcantidadSt());
-            
         }
     }
-        
-        
-    }
+   
+}
+public static void hola(){
+    System.out.println("He llegado sano y salvo a mi hogar, y ahora sin nada mas que hacer seguire con el codigo");
+
+}
+
+            
+          
     
             
     
