@@ -160,7 +160,27 @@ public class Lab8P1_DiegoDiaz {
     }
     
     public static void actualizar(ArrayList<Videojuego> inventario){
-        System.out.println("=== Actualizar videojuego === ");
+        System.out.println("=== Actualizar videojuegos === ");
+        System.out.println("Ingrese el dodigo");
+        int codigo = leer.nextInt();
+        
+        Videojuego v = buscarcode(inventario, codigo);
+        System.out.println("Videojuego: " + v.Gnomproducto());
+            System.out.println("Precio actual: " + v.GprecioJuegos());
+            System.out.print("Nuevo precio: ");
+            int nuevoPrecio = leer.nextInt();
+            System.out.println("stock actual" + v.GcantidadSt());
+            System.out.println("Nuevo stock: ");
+            int nuevoStock = leer.nextInt();
+            
+            v.SprecioJuegos(nuevoPrecio);
+            v.ScantidadSt(nuevoStock);
+            
+            
+            
+            
     }
+    
+    
 
 }
